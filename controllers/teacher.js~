@@ -1,0 +1,15 @@
+exports.find = function (req,res){
+    re.send("Hello World");
+;}
+
+exports.create = function(req,res){
+    re.send("create a teacher");
+;}
+
+exports.update= function(req,res){
+    re.send("update a teacher");
+;}
+
+exports.delete = function(req,res){
+    re.send("delete a teacher");
+;}
