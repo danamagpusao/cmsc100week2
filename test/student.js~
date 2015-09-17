@@ -37,6 +37,11 @@ var request = require('supertest'),
                     if(err) throw err;
                     res.should.have.status(200);
                     res.body.should.be.an.instanceOf(Object);
+                    should('studNo').be.type('string');
+                    should('name').be.type('string');
+                    should.have.property('studNo').with.lengthOf(9);
+                    should.have.property('name');
+                    should.have.property('bdate');
                     done();
                 });
             });
