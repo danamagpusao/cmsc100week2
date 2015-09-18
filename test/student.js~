@@ -31,19 +31,21 @@ var request = require('supertest'),
         describe('insert()',function(){ //for each unit
             it('should return a newly created record', function(done){
                 request(url)
+                var studentNo='2014-11124';
                 .post('/students')
-                .send({'name':'dana','studNo':'2016-55541','bdate':'1911-11-11'})   
+                .send({'name':'dsadasd','studNo':'2014-55541','bdate':'1921-11-11'})   
                 .end(function(err,res){
                     if(err) throw err;
                     res.should.have.status(200);
                     res.body.should.be.an.instanceOf(Object);
-                    should('studNo').be.type('string');
-                    should('name').be.type('string');
                     should.have.property('studNo').with.lengthOf(9);
                     should.have.property('name');
                     should.have.property('bdate');
+                    should('studNo').be.type('string');
+                    should('name').be.type('string');
                     done();
                 });
+                
             });
         });
   

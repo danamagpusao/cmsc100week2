@@ -32,7 +32,7 @@ var request = require('supertest'),
             it('should return a newly created record', function(done){
                 request(url)
                 .post('/students')
-                .send({'name':'dana','studNo':'2016-55541','bdate':'1911-11-11'})   
+                .send({'name':'dsadasd','studNo':'2014-55541','bdate':'1921-11-11'})   
                 .end(function(err,res){
                     if(err) throw err;
                     res.should.have.status(200);
@@ -44,6 +44,7 @@ var request = require('supertest'),
                     should('name').be.type('string');
                     done();
                 });
+                
             });
         });
   
